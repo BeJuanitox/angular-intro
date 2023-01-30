@@ -3,7 +3,7 @@
     ===== Código de TypeScript =====
 */
 
-interface Product {
+export interface Product {
     description: string;
     price: number;
 }
@@ -18,7 +18,7 @@ const tablet: Product = {
     price: 2000000
 }
 
-function calculaISV(products: Product[] ): [number, number] {
+export function calculaISV(products: Product[] ): [number, number] {
     let total = 0;
 
     //products.forEach( (product) => {
@@ -30,9 +30,9 @@ function calculaISV(products: Product[] ): [number, number] {
     return [total, total * 0.15];
 }
 
-const articles = [phone, tablet];
+// const articles = [phone, tablet];
 
-const [total, isv] = calculaISV(articles);
+// const [total, isv] = calculaISV(articles);
 
-console.log('Total: ', total)
-console.log('ISV: ', isv)
+// console.log('Total: ', total)
+// console.log('ISV: ', isv)
